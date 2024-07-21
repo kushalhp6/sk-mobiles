@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK Mobiles</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hero-bg {
+            background-color: rgba(0, 0, 0, 0.6);
+            position: relative;
+            z-index: 1;
+        }
+        .hero-bg::before {
+            content: '';
+            background-image: url('./bg.jpg');
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            /* opacity: 0.3; */
+        }
+        .max-w-screen-md {
+            max-width: 768px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">SK Mobiles</a>
+            <div class="block lg:hidden">
+                <button id="navbar-toggle" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:items-center w-full lg:w-auto" id="navbar-menu">
+                <a href="#about" class="block mt-4 lg:inline-block lg:mt-0 px-4">About</a>
+                <a href="#services" class="block mt-4 lg:inline-block lg:mt-0 px-4">Services</a>
+                <a href="#contact" class="block mt-4 lg:inline-block lg:mt-0 px-4">Contact</a>
+                <a href="#developer" class="block mt-4 lg:inline-block lg:mt-0 px-4">Developer</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg text-white text-center py-32 relative">
+        <h1 class="text-4xl font-bold">Welcome to SK Mobiles</h1>
+        <p class="mt-4 text-lg">Your one-stop shop for second-hand mobiles and accessories</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">About Us</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 p-4">
+                    <img src="./shop.jpg" alt="Shop Image" class="rounded-lg shadow-lg max-w-full h-auto">
+                </div>
+                <div class="md:w-1/2 p-4">
+                    <p class="text-gray-700 text-lg text-justify">At SK Mobiles, we pride ourselves on offering a wide selection of high-quality second-hand mobile phones and accessories. Our expert technicians are dedicated to providing top-notch repair services to ensure your devices function like new. We are committed to customer satisfaction and strive to offer the best deals in town.</p>
+                    <p class="text-gray-700 text-lg text-justify mt-4">Visit our shop at Champahati, South 24 Pgs, and experience our exceptional service. Whether you're looking to buy a phone, purchase accessories, or need a repair, SK Mobiles is here to help.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-12 bg-gray-50">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-white border rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Second-hand Mobiles</h3>
+                    <p class="text-gray-700 text-justify">Discover a wide range of high-quality second-hand mobiles at affordable prices.</p>
+                </div>
+                <div class="p-6 bg-white border rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Mobile Accessories</h3>
+                    <p class="text-gray-700 text-justify">We offer a variety of accessories for all mobile brands, including cases, chargers, headphones, and more.</p>
+                </div>
+                <div class="p-6 bg-white border rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Repair Services</h3>
+                    <p class="text-gray-700 text-justify">Our expert technicians provide reliable repair services for all types of mobile devices.</p>
+                </div>
+                <div class="p-6 bg-white border rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Screen Replacement</h3>
+                    <p class="text-gray-700 text-justify">We offer quick and affordable screen replacement services to get your phone looking like new again.</p>
+                </div>
+                <div class="p-6 bg-white border rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Battery Replacement</h3>
+                    <p class="text-gray-700 text-justify">Our battery replacement service ensures your phone stays powered throughout the day.</p>
+                </div>
+                <div class="p-6 bg-white border rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">Software Updates</h3>
+                    <p class="text-gray-700 text-justify">Keep your device running smoothly with our software update services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 p-4 max-w-screen-md mx-auto">
+                    <img src="./sk.jpg" alt="Owner Image" class="rounded-lg shadow-lg max-w-full h-auto md:max-w-sm">
+                </div>
+                <div class="md:w-1/2 p-4 max-w-screen-md mx-auto">
+                    <p class="text-gray-700 text-lg text-justify mb-4">Owner: SK Sarfarz</p>
+                    <p class="text-gray-700 text-lg text-justify mb-4">Phone: +91 96094 20477, +91 91238 89819</p>
+                    <p class="text-gray-700 text-lg text-justify mb-4">Address: Champahati, South 24 Pgs, 743330</p>
+                    <p class="text-gray-700 text-lg text-justify">Opening Hours: 10am - 9pm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Section -->
+    <section id="developer" class="py-12 bg-gray-50">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Developed By</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 p-4 max-w-screen-md mx-auto">
+                    <img src="./kd.JPG" alt="Developer Image" class="rounded-lg shadow-lg max-w-full h-auto md:max-w-sm">
+                </div>
+                <div class="md:w-1/2 p-4 max-w-screen-md mx-auto">
+                    <p class="text-gray-700 text-lg text-justify mb-4">Kushal Dalal</p>
+                    <p class="text-gray-700 text-lg text-justify mb-4">WhatsApp: 6294134884</p>
+                    <p class="text-gray-700 text-lg text-justify">Full Stack Engineer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 SK Mobiles. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript to toggle navbar -->
+    <script>
+        document.getElementById('navbar-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('navbar-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
